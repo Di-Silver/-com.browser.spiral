@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@color/gray"
+    android:layout_height="match_parent"
+    tools:context=".settings">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@color/electric_blue"
+        android:text="Settings"
+        android:textColor="@color/green"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerText"/>
+
+    <TextView
+        android:id="@+id/spinnerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@color/electric_blue"
+        android:text="Default engine"
+        android:textColor="@color/green"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="10dp"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/todo"
+        android:minHeight="48dp"
+        android:textColor="@color/green"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinnerText" />
+
+    <CheckedTextView
+        android:id="@+id/notifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@color/electric_blue"
+        android:text="Allow voice notifications"
+        android:checked="false"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:textColor="@color/green"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"/>
+
+    <CheckedTextView
+        android:id="@+id/secureBrowsing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@color/electric_blue"
+        android:text="Enable safe browsing"
+        android:checked="true"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:textColor="@color/green"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@+id/notifications"/>
+
+
+    <CheckedTextView
+        android:id="@+id/history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@color/electric_blue"
+        android:text="Enable history saving"
+        android:checked="false"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:textColor="@color/green"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@+id/secureBrowsing"/>
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="Rate the spiral browser"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/history" />
+
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingbar"
+        android:contentDescription="@string/todo"
+        android:max="10"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        android:progressTint="@color/lime_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rating"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

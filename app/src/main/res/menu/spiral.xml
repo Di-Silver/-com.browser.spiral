@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+
+        <item
+            android:id="@+id/gogle"
+            android:title="google"/>
+
+        <item
+            android:id="@+id/duckduckgo"
+            android:title="DuckDuckGo" />
+
+        <item
+            android:id="@+id/bing"
+            android:title="Bing" />
+
+        <item
+            android:id="@+id/yahoo"
+            android:title="Yahoo" />
+
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/youtube"
+            android:title="Youtube"/>
+
+        <item
+            android:id="@+id/shodan"
+            android:title="shodan" />
+
+        <item
+            android:id="@+id/tiktok"
+            android:title="Tiktok" />
+
+        <item
+            android:id="@+id/reddit"
+            android:title="Reddit" />
+
+        <item
+            android:id="@+id/Pinterest"
+            android:title="Pinterest"/>
+
+        <item
+            android:id="@+id/Quora"
+            android:title="Quora" />
+
+    </group>
+
+</menu>
